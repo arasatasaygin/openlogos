@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>OPEN LOGOS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
+  <style>
+    html {
+      box-sizing: border-box;
+      font-family: 'Lato', sans-serif;
+    }
+
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+
+    .container {
+      margin: auto;
+      max-width: 1200px;
+      font-size: 0;
+    }
+
+    .header {
+      padding: 50px;
+    }
+
+    .header__title {
+      font-size: 28px;
+      margin-bottom: 20px;
+      font-weight: 900;
+    }
+
+    .header__text {
+      font-size: 18px;
+      color: #666666;
+      line-height: 28px
+    }
+
+    .text--emoji {
+      font-size: 28px;
+    }
+
+    .text--bold {
+      color: black;
+      font-weight: 900;
+    }
+
+    .header__rules-expand {
+      color: #666666;
+      text-decoration: none;
+      border-bottom: 8px solid #E7E7E7;
+      padding-bottom: 2px;
+    }
+
+    .header__rules-expand::after{
+      content: '+';
+    }
+
+    .header__rules-expand--active::after{
+      content: '-';
+    }
+
+    .header__rules-expand:hover {
+      border-bottom: 8px solid #DEDEDE;
+    }
+
+    .header__rules {
+      display: none;
+    }
+
+    .header__rules.text--visible {
+      display: block;
+      font-size: 16px;
+      color: #666666;
+      line-height: 28px;
+      list-style-type: disc;
+      padding: 20px 20px 0;
+    }
+
+    .header__cta {
+      padding: 20px 30px;
+      background-color: #D35400;
+      color: white;
+      font-family: 'Lato', sans-serif;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 30px;
+      display: inline-block;
+    }
+
+    .header__cta:hover {
+      background-color: #C25401;
+    }
+
+    .cell {
+      display: inline-block;
+      width: 20%;
+      padding: 10px;
+      margin-bottom: 100px;
+      text-align: center;
+      font-family: 'Lato', sans-serif;
+      color: #9e9e9e;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .cell img {
+      max-width: 100%;
+    }
+
+    .cell span {
+      padding: 4px 8px 6px 8px;
+      border-radius: 5px;
+    }
+
+    .cell:hover .logo--morning { background-color: #FFFF9B; color: #7A4E38; }
+    .cell:hover .logo--mr-jumbo { background-color: #FFDA3C; color: #352B00; }
+    .cell:hover .logo--gate-keeper { background-color: #DBA5AC; color: #51131D; }
+    .cell:hover .logo--quick-finger { background-color: #CCE0AF; color: #283A0A; }
+    .cell:hover .logo--hangry-birds { background-color: #75BAB3; color: white; }
+    .cell:hover .logo--kareem { background-color: #ADECFE; color: #213D44; }
+    .cell:hover .logo--foxy { background-color: #C0E1FF; color: #2E5775; }
+    .cell:hover .logo--speedy { background-color: #BABF92; color: #3C3F16; }
+    .cell:hover .logo--flame { background-color: #E4D9CA; color: #3A2C1C; }
+    .cell:hover .logo--clique { background-color: #B9B9B9; color: black; }
+    .cell:hover .logo--birdangle { background-color: #E6E6E6; color: black; }
+    .cell:hover .logo--moby { background-color: #253237; color: white; }
+    .cell:hover .logo--blush { background-color: #AAFCC7; color: #1A492A; }
+    .cell:hover .logo--neo { background-color: #FCEEC2; color: #664728; }
+    .cell:hover .logo--sage { background-color: #52A752; color: white; }
+    .cell:hover .logo--charlie { background-color: #B79FE6; color: #3D315B; }
+    .cell:hover .logo--steps { background-color: #45454B; color: white; }
+    .cell:hover .logo--the-fall { background-color: #65CFA9; color: #044F32; }
+    .cell:hover .logo--aysha { background-color: #DBB5FF; color: #250051; }
+    .cell:hover .logo--recurse { background-color: #009FB7; color: white; }
+    .cell:hover .logo--viki { background-color: #FFDCB6; color: #4F3D2C; }
+    .cell:hover .logo--im-possible { background-color: #F1F347; color: #3D3C14; }
+    .cell:hover .logo--apple { background-color: #FCC46C; color: #633600; }
+    .cell:hover .logo--globe { background-color: #CDFF88; color: #3A4922; }
+    .cell:hover .logo--bug-lock { background-color: #E4D9CA; color: #2B2115; }
+    .cell:hover .logo--ferdinand { background-color: #C1272D; color: white; }
+    .cell:hover .logo--rayray { background-color: #9C8171; color: white; }
+    .cell:hover .logo--inspector { background-color: #A8B9D3; color: #183051; }
+    .cell:hover .logo--cosmos { background-color: #889EA8; color: white; }
+    .cell:hover .logo--watch-bob { background-color: #A0A4DA; color: #22253F; }
+
+    .footer {
+      padding: 50px;
+      background-color: #EFEFEF;
+      margin: 0 30px 30px 30px;
+      border-radius: 5px;
+    }
+
+    .footer__text {
+      display: inline-block;
+      font-size: 18px;
+      color: #666666;
+      line-height: 28px
+    }
+
+    .footer__cta {
+      padding: 20px 30px;
+      background-color: #D35400;
+      color: white;
+      font-family: 'Lato', sans-serif;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      float: right;
+    }
+
+    .footer__cta:hover {
+      background-color: #C25401;
+    }
+
+    @media screen and (max-width: 1000px) {
+      .cell {
+        width: 33%;
+      }
+
+      .footer {
+          padding: 35px;
+      }
+
+      .footer__text {
+        display: block;
+      }
+
+      .footer__cta {
+        display: block;
+        width: 100%;
+        text-align: center;
+        float: none;
+        margin-top: 30px;
+        padding: 20px 0;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .cell {
+        width: 50%;
+      }
+
+      .text--hidden-sm {
+        display: none !important;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .header {
+          padding: 35px 35px 0;
+      }
+
+      .header__cta {
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      .cell {
+        width: 100%;
+        padding: 30px;
+        margin-bottom: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 class="header__title">OPEN LOGOS</h1>
+      <p class="header__text">
+        Hello software people <span class="text--emoji">👋</span> <br>
+        I designed these <em class="text--bold">free logos for your open source projects.</em>
+      </p>
+      <p class="header__text text--hidden-sm">
+        You can claim any, community will decide which project should get it.
+        <a class="header__rules-expand" href="#header__rules">How it works </a>
+      </p>
+      <ul id="header__rules" class="header__rules text--hidden-sm">
+        <li>To claim a logo, you need to have an active open source project.</li>
+        <li>One logo can be only given to one project. This project will have all exclusive rights of the logo.</li>
+        <li>Every logo has one github issue that you can introduce your project to and claim.</li>
+        <li>Community can upvote your comment and you can upvote other projects as well under these issues.</li>
+        <li>Starting from 1st of July, I will give one logo per day until the end of month according to these upvotes.</li>
+      </ul>
+      <a class="header__cta" href="https://github.com/arasatasaygin/openlogos">Claim your logo in Github</a>
+    </div>
+    <a href="https://github.com/arasatasaygin/openlogos/issues/1" class="cell">
+      <img src="./logos/morning.jpg">
+      <span class="logo--morning">morning</span>
+    </a>
+    <a href="https://github.com/arasatasaygin/openlogos/issues/2" class="cell">
+      <img src="./logos/mr-jumbo.jpg">
+      <span class="logo--mr-jumbo">mr jumbo</span>
+    </a>
+    <a href="https://github.com/arasatasaygin/openlogos/issues/3" class="cell">
+      <img src="./logos/gate-keeper.jpg">
+      <span class="logo--gate-keeper">gate keeper</span>
+    </a>
+    <a href="https://github.com/arasatasaygin/openlogos/issues/4" class="cell">
+      <img src="./logos/quick-fingers.jpg">
+      <span class="logo--quick-finger">quick fingers</span>
+    </a>
+    <a href="https://github.com/arasatasaygin/openlogos/issues/5" class="cell">
+      <img src="./logos/hangry-birds.jpg">
+      <span class="logo--hangry-birds">hangry birds</span>
+    </a>
+    <a href="https://github.com/arasatasaygin/openlogos/issues/6" class="cell">
+      <img src="./logos/kareem.jpg">
+      <span class="logo--kareem">kareem</span>
+    </a>
+    <a href="https://github.com/arasatasaygin/openlogos/issues/7" class="cell">
+      <img src="./logos/foxy.jpg">
+      <span class="logo--foxy">foxy</span>
+    </a>
+    <a href="https://github.com/arasatasaygin/openlogos/issues/8" class="cell">
+      <img src="./logos/speedy.jpg">
+      <span class="logo--speedy">speedy</span>
+    </a>
+    <a href="https://github.com/arasatasaygin/openlogos/issues/9" class="cell">
+      <img src="./logos/flame.jpg">
+      <span class="logo--flame">flame</span>
+    </a>
+    <a href="https://github.com/arasatasaygin/openlogos/issues/10" class="cell">
+      <img src="./logos/clique.jpg">
+      <span class="logo--clique">clique</span>
+    </a>
+    <a href="https://github.com/arasatasaygin/openlogos/issues/11" class="cell">
+      <img src="./logos/birdangle.jpg">
+      <span class="logo--birdangle">birdangle</span>
+    </a>
+    <a href="https://github.com/arasatasaygin/openlogos/issues/12" class="cell">
+      <img src="./logos/moby.jpg">
+      <span class="logo--moby">moby</span>
+    </a>
+    <a href="https://github.com/arasatasaygin/openlogos/issues/13" class="cell">
+      <img src="./logos/blush.jpg">
+      <span class="logo--blush">blush</span>
+    </a>
+    <a href="https://github.com/arasatasaygin/openlogos/issues/14" class="cell">
+      <img src="./logos/neo.jpg">
+      <span class="logo--neo">neo</span>
+    </a>
+    <a href="https://github.com/arasatasaygin/openlogos/issues/15" class="cell">
+      <img src="./logos/sage.jpg">
+      <span class="logo--sage">sage</span>
+    </a>
+    <a href="https://github.com/arasatasaygin/openlogos/issues/16" class="cell">
+      <img src="./logos/charlie.jpg">
+      <span class="logo--charlie">charlie</span>
+    </a>
+    <a href="https://github.com/arasatasaygin/openlogos/issues/17" class="cell">
+      <img src="./logos/steps.jpg">
+      <span class="logo--steps">steps</span>
+    </a>
+    <a href="https://github.com/arasatasaygin/openlogos/issues/18" class="cell">
+      <img src="./logos/the-fall.jpg">
+      <span class="logo--the-fall">the fall</span>
+    </a>
+    <a href="https://github.com/arasatasaygin/openlogos/issues/19" class="cell">
+      <img src="./logos/aysha.jpg">
+      <span class="logo--aysha">aysha</span>
+    </a>
+    <a href="https://github.com/arasatasaygin/openlogos/issues/20" class="cell">
+      <img src="./logos/recurse.jpg">
+      <span class="logo--recurse">recurse</span>
+    </a>
+    <a href="https://github.com/arasatasaygin/openlogos/issues/21" class="cell">
+      <img src="./logos/viki.jpg">
+      <span class="logo--viki">viki</span>
+    </a>
+    <a href="https://github.com/arasatasaygin/openlogos/issues/22" class="cell">
+      <img src="./logos/im-possible.jpg">
+      <span class="logo--im-possible">im possible</span>
+    </a>
+    <a href="https://github.com/arasatasaygin/openlogos/issues/23" class="cell">
+      <img src="./logos/apple.jpg">
+      <span class="logo--apple">apple</span>
+    </a>
+    <a href="https://github.com/arasatasaygin/openlogos/issues/24" class="cell">
+      <img src="./logos/globe.jpg">
+      <span class="logo--globe">globe</span>
+    </a>
+    <a href="https://github.com/arasatasaygin/openlogos/issues/25" class="cell">
+      <img src="./logos/bug-lock.jpg">
+      <span class="logo--bug-lock">bug lock</span>
+    </a>
+    <a href="https://github.com/arasatasaygin/openlogos/issues/26" class="cell">
+      <img src="./logos/ferdinand.jpg">
+      <span class="logo--ferdinand">ferdinand</span>
+    </a>
+    <a href="https://github.com/arasatasaygin/openlogos/issues/27" class="cell">
+      <img src="./logos/rayray.jpg">
+      <span class="logo--rayray">rayray</span>
+    </a>
+    <a href="https://github.com/arasatasaygin/openlogos/issues/28" class="cell">
+      <img src="./logos/inspector.jpg">
+      <span class="logo--inspector">inspector</span>
+    </a>
+    <a href="https://github.com/arasatasaygin/openlogos/issues/29" class="cell">
+      <img src="./logos/cosmos.jpg">
+      <span class="logo--cosmos">cosmos</span>
+    </a>
+    <a href="https://github.com/arasatasaygin/openlogos/issues/30" class="cell">
+      <img src="./logos/watch-bob.jpg">
+      <span class="logo--watch-bob">watchbob</span>
+    </a>
+    <div class="footer">
+      <div class="footer__text">
+        <p> WANT TO TALK OR SUPPORT?</p>
+        <p> You can ping me from <a href="https://twitter.com/arasatasaygin" class="text--bold">@arasatasaygin</a> | arasatasaygin-at-gmail.com </p>
+      </div>
+      <a class="footer__cta" href="">Support from Patreon</a>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('click', function (event) {
+      if (!event.target.classList.contains('header__rules-expand')) return;
+      event.preventDefault();
+      event.target.classList.toggle('header__rules-expand--active');
+      document.querySelector(event.target.hash).classList.toggle('text--visible');
+    }, false);
+  </script>
+</body>
+</html>

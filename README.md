@@ -55,4 +55,4 @@ You can claim any, community will decide which project should get it.
 You can become a patron from [PATREON](https://www.patreon.com/arasatasaygin)
 
 ## Sponsors
-[Stickermule](https://www.stickermule.com) is offering a $75 credit to those projects who claim a logo.
+[Sticker Mule](https://mule.to/openlogos) is offering a $75 credit to those projects who claim a logo.

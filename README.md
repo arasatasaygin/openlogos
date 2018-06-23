@@ -51,6 +51,11 @@ You can claim any, community will decide which project should get it.
 [<img src="https://arasatasaygin.github.io/openlogos/logos/cosmos.jpg" width="170" height="170">](https://github.com/arasatasaygin/openlogos/issues/29)
 [<img src="https://arasatasaygin.github.io/openlogos/logos/watch-bob.jpg" width="170" height="170">](https://github.com/arasatasaygin/openlogos/issues/30)
 
+## Contribution
+If you are a designer and interested in contributing to second batch of logos:
+* Feel free to ping me from [@arasatasaygin](https://twitter.com/arasatasaygin)
+* arasatasaygin-at-gmail.com
+
 ## Support
 You can become a patron from [PATREON](https://www.patreon.com/arasatasaygin)
 

@@ -11,7 +11,7 @@ You can claim any, community will decide which project should get it.
 * One logo can be only given to one project. This project will have all exclusive rights of the logo.
 * Every logo has one github issue that you can introduce your project to and claim.
 * Community can upvote your comment and you can upvote other projects as well under these issues.
-* Starting from 1st of July, I will give one logo per day until the end of month according to these upvotes.
+* Starting from 1st of ~~July~~ August, I will give one logo per day until the end of month according to these upvotes.
 
 ## Claim your logo
 
